@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Number Guessing Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="./assets/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="./assets/style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="pt-5">
+      <div class="d-flex flex-column justify-content-center">
+        <div>
+          <h2
+            class="font-weight-bold badge-pill ml-5 mr-5 text-center pt-2 pb-2"
+          >
+            Guess the number
+          </h2>
+        </div>
+        <h4 class="text-center message ml-5 mr-5" id="message">
+          I'm thinking of a number between 1 and 100. Can you guess what it is?
+          You have 10 tries.
+        </h4>
+        <div class="container d-flex justify-content-center">
+          <input type="number" id="number" />
+          <span>
+            <button
+              class="btn btn-light ml-4"
+              id="guessButton"
+              onclick="guess()"
+            >
+              GUESS
+            </button>
+          </span>
+        </div>
+        <div class="text-center mt-3">
+          <button class="btn btn-dark" onclick="resetGame()">New Game</button>
+        </div>
+        <img id="firework" class="firework" src="./public/firework.gif" />
+        <div id="history" class="text-center font-weight-bold mt-5"></div>
+      </div>
+    </div>
+  </body>
+</html>
